@@ -1,0 +1,7 @@
+- @samples.each do |sample|
+  %h2= link_to sample.name, sample
+  %p= sample.description
+  /= link_to 'Edit', edit_sample_path(sample)
+  /= link_to 'Destroy', sample, :confirm => 'Are you sure?', :method => :delete
+
+= link_to 'Add Sample', new_sample_path
