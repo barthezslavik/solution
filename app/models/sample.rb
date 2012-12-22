@@ -1,3 +1,4 @@
 class Sample < ActiveRecord::Base
-  attr_accessible :description, :name
+  has_attached_file :screenshot, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  attr_accessible :description, :name, :screenshot
 end

@@ -1,7 +1,7 @@
 %p#notice= notice
 
 %h2= @sample.name
-%p= @sample.description
+%pre= @sample.description
 
 /= link_to 'Edit', edit_sample_path(@sample)
 /= link_to 'Back', samples_path
