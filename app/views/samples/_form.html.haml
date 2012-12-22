@@ -1,8 +1,14 @@
 = simple_form_for @sample do |f|
   .inputs.clearfix
     = f.input :name
+    %br
     = f.input :description
+    %br
     = f.input :screenshot, :as => :file
+    %br
     = f.input :demo
+    %br
+    = f.association :category, :collection => Category.all(:order => 'name'), :prompt => "Choose a Category"
+    %br
   .actions.clearfix
     = f.submit 'Save'

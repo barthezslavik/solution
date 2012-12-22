@@ -2,7 +2,9 @@ class SamplesController < ApplicationController
   # GET /samples
   # GET /samples.json
   def index
-    @samples = Sample.all
+    category_id = Category.find_by_name("Main")
+    @samples = Sample.find_all_by_category_id(category_id)
+    @categories = Category.all
 
     respond_to do |format|
       format.html # index.html.erb
