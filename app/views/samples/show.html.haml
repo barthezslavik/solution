@@ -2,6 +2,7 @@
 
 %h2= @sample.name
 %pre= @sample.description
+=image_tag @sample.screenshot.url(:medium)
 
 /= link_to 'Edit', edit_sample_path(@sample)
 /= link_to 'Back', samples_path
