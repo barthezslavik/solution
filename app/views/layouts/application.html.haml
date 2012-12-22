@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title Solution
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = javascript_include_tag "http://gettopup.com/releases/latest/top_up-min.js"
+    = csrf_meta_tags
+  %body
+    = yield
