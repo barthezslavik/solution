@@ -23,6 +23,15 @@ end
 
 gem 'jquery-rails'
 gem "jquery-fileupload-rails"
+gem "rb-readline"
+
+gem "wiselinks"
+
+group :development do
+  gem "better_errors"
+end
+
+gem "binding_of_caller"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
