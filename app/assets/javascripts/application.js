@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-fileupload/basic
-//= require_tree .
 //= require wiselinks
+//= require_tree .
 
 $(document).ready(function() {
   window.wiselinks = new Wiselinks();

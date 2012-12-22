@@ -3,8 +3,8 @@
 %h2= @sample.name
 %pre= @sample.description
 - if @sample.screenshot_file_name?
-  =image_tag @sample.screenshot.url(:large)
-  =image_tag @sample.screenshot.url
+  =link_to image_tag(@sample.screenshot.url :large), @sample.screenshot.url
+
 
 /= link_to 'Edit', edit_sample_path(@sample)
 /= link_to 'Back', samples_path
