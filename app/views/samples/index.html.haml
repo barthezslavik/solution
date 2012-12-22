@@ -3,8 +3,7 @@
     %tr
       %td
         - screenshot = image_tag sample.screenshot.url(:medium) if sample.screenshot
-        - if sample.screenshot_file_name?
-          = screenshot
+        = screenshot
       %td= link_to sample.name, sample, data:{ push: true }
   /= link_to 'Edit', edit_sample_path(sample)
   /= link_to 'Destroy', sample, :confirm => 'Are you sure?', :method => :delete

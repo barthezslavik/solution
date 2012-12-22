@@ -1,5 +1,7 @@
 = simple_form_for @sample do |f|
-  = f.input :name
-  = f.input :description
-  = f.input :screenshot, :as => :file
-  = f.submit 'Save'
+  .inputs.clearfix
+    = f.input :name
+    = f.input :description
+    = f.input :screenshot, :as => :file
+  .actions.clearfix
+    = f.submit 'Save'
