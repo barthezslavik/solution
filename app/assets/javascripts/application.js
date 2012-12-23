@@ -17,5 +17,5 @@
 //= require_tree .
 
 $(document).ready(function() {
-  window.wiselinks = new Wiselinks();
+  //window.wiselinks = new Wiselinks();
 });
