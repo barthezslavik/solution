@@ -36,6 +36,7 @@ gem "jquery-fileupload-rails"
 
 gem "paperclip", "~> 3.0"
 gem "simple_form"
+gem "devise"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
