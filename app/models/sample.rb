@@ -3,4 +3,5 @@ class Sample < ActiveRecord::Base
   attr_accessible :description, :name, :screenshot, :demo, :category_id
 
   belongs_to :category
+  has_many :comments, :as => :commentable
 end
