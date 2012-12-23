@@ -1,26 +1,28 @@
-= link_to "Главная", "/", :class => "link"
-%br
-%br
-.wide_block
-  /%p#notice= notice
+.center
+  = link_to "Главная", "/", :class => "link"
+  %br
+  %br
+  .wide_block
+    /%p#notice= notice
 
-  .left
-    %h2= @sample.name 
-  .right
+    .left
+      %h2= @sample.name 
+    .right
+      %br
+      = link_to 'Edit', edit_sample_path(@sample), :class => "link"
+
     %br
-    = link_to 'Edit', edit_sample_path(@sample), :class => "link"
+    %br.both
 
-  %br
-  %br.both
+    %pre= @sample.description
+    - if @sample.screenshot_file_name?
+      =link_to image_tag(@sample.screenshot.url :large), @sample.screenshot.url
 
-  %pre= @sample.description
-  - if @sample.screenshot_file_name?
-    =link_to image_tag(@sample.screenshot.url :large), @sample.screenshot.url
+    %br
+    %br
 
-  %br
-  %br
-
-  =link_to "Demo", "/#{@sample.demo}", :class => "link"
+    -if @sample.demo?
+      =link_to "Demo", "/#{@sample.demo}", :class => "link"
 
 
-  /= link_to 'Back', samples_path
+    /= link_to 'Back', samples_path
