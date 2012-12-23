@@ -1,12 +1,11 @@
-%table
-  - @samples.each do |sample|
-    %tr
-      %td
-        - screenshot = image_tag sample.screenshot.url(:medium) if sample.screenshot
-        = link_to screenshot, sample
-      %td= link_to sample.name, sample, data:{ push: true }
-  /= link_to 'Edit', edit_sample_path(sample)
-  /= link_to 'Destroy', sample, :confirm => 'Are you sure?', :method => :delete
+- @samples.each do |sample|
+  .block
+    = link_to sample.name, sample, data:{ push: true }
+    %br
+    - screenshot = image_tag sample.screenshot.url(:medium) if sample.screenshot
+    = link_to screenshot, sample
+    /= link_to 'Edit', edit_sample_path(sample)
+    /= link_to 'Destroy', sample, :confirm => 'Are you sure?', :method => :delete
 
-%br
+%br.both
 = link_to 'Add Sample', new_sample_path
