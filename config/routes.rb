@@ -1,14 +1,11 @@
 Solution::Application.routes.draw do
-  resources :comments
-
-
   devise_for :users
 
   resources :categories
 
-
-  resources :samples
-
+  resources :samples do
+    resources :comments
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

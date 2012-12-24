@@ -22,6 +22,11 @@
 
   -if @sample.demo?
     =link_to "Demo", "/#{@sample.demo}", :class => "link"
+  %br
+  %br
 
+  = simple_form_for([@sample, @sample.comments.build]) do |f|
+    = f.input :content, :as => :text, :label => false
+    = f.submit "Опубликовать"
 
   /= link_to 'Back', samples_path
