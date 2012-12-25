@@ -1,6 +1,5 @@
 = link_to "Главная", "/", :class => "link"
-%br
-%br
+%br.both
 .wide_block
   /%p#notice= notice
 
@@ -22,8 +21,8 @@
   -if @sample.demo?
     %br
     =link_to "Demo", "/#{@sample.demo}", :class => "link"
-    %br
-    %br
+    %br.both
+    %br.both
 
   - @sample.comments.each do |s|
     = s.created_at.to_s(:short)
