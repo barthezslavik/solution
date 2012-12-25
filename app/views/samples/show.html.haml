@@ -18,12 +18,19 @@
     =link_to image_tag(@sample.screenshot.url :large), @sample.screenshot.url
 
   %br
-  %br
 
   -if @sample.demo?
+    %br
     =link_to "Demo", "/#{@sample.demo}", :class => "link"
-  %br
-  %br
+    %br
+    %br
+
+  - @sample.comments.each do |s|
+    = s.created_at.to_s(:short)
+    %br
+    = s.content
+    %br
+    %br
 
   = simple_form_for([@sample, @sample.comments.build]) do |f|
     = f.input :content, :as => :text, :label => false
